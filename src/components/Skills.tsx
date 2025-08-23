@@ -31,29 +31,31 @@ const Skills: React.FC = () => {
 
   return (
     <section id="skills" className="py-24">
-      <div className="max-w-[1140px] mx-auto px-8">
-        <h2 className="text-4xl font-bold text-white mb-12 text-center">My skills</h2>
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="group relative"
-            >
-              <div className={`
-                w-24 h-24 rounded-xl ${skill.bgColor}
-                flex flex-col items-center justify-center
-                hover:scale-105 hover:shadow-[0_0_20px_rgba(147,51,234,0.5)]
-                transition-all duration-300 cursor-pointer
-                border border-gray-700 hover:border-transparent
-              `}>
-                {skill.icon}
+      <div className="w-full max-w-7xl mx-auto px-6">
+        <div className="bg-white rounded-3xl shadow-lg p-8">
+          <h2 className="text-4xl font-bold text-black mb-12 text-center">My skills</h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {skills.map((skill, index) => (
+              <div
+                key={index}
+                className="group relative"
+              >
+                <div className={`
+                  w-24 h-24 rounded-xl ${skill.bgColor}
+                  flex flex-col items-center justify-center
+                  hover:scale-105 hover:shadow-[0_0_20px_rgba(147,51,234,0.5)]
+                  transition-all duration-300 cursor-pointer
+                  border border-gray-700 hover:border-transparent
+                `}>
+                  {skill.icon}
+                </div>
+                <p className="text-black text-sm font-medium mt-2 text-center">
+                  {skill.name}
+                </p>
               </div>
-              <p className="text-white text-sm font-medium mt-2 text-center">
-                {skill.name}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
