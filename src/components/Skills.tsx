@@ -10,6 +10,9 @@ import mysqlLogo from './skillLogo/MySQL_textlogo.svg.png';
 import firebaseLogo from './skillLogo/firebase.png';
 import aspNetLogo from './skillLogo/asp.net_.webp';
 import socketIoLogo from './skillLogo/Socket-io.svg.png';
+import digitalOceanLogo from './skillLogo/DigitalOcean_logo.svg.png';
+import cPanelLogo from './skillLogo/CPanel_logo.svg.png';
+import symfonyLogo from './skillLogo/symfony.svg';
 
 interface Skill {
   name: string;
@@ -29,14 +32,17 @@ const Skills: React.FC = () => {
     { name: 'MySQL', logo: mysqlLogo, category: 'database', borderColor: 'border-blue-600', shadowColor: 'rgba(59,130,246,0.6)' },
     { name: 'Firebase', logo: firebaseLogo, category: 'database', borderColor: 'border-orange-500', shadowColor: 'rgba(249,115,22,0.6)' },
     { name: 'ASP.NET', logo: aspNetLogo, category: 'backend', borderColor: 'border-purple-600', shadowColor: 'rgba(147,51,234,0.6)' },
-    { name: 'Socket.IO', logo: socketIoLogo, category: 'backend', borderColor: 'border-gray-500', shadowColor: 'rgba(107,114,128,0.6)' }
+    { name: 'Socket.IO', logo: socketIoLogo, category: 'backend', borderColor: 'border-gray-500', shadowColor: 'rgba(107,114,128,0.6)' },
+    { name: 'DigitalOcean', logo: digitalOceanLogo, category: 'cloud', borderColor: 'border-blue-500', shadowColor: 'rgba(59,130,246,0.6)' },
+    { name: 'cPanel', logo: cPanelLogo, category: 'hosting', borderColor: 'border-orange-400', shadowColor: 'rgba(249,115,22,0.6)' },
+    { name: 'Symfony', logo: symfonyLogo, category: 'backend', borderColor: 'border-gray-500', shadowColor: 'rgba(68,68,68,0.6)' }
   ];
 
   return (
-    <section id="skills" className="py-24">
+    <section id="skills" className=" bg-[#0B0B12]">
       <div className="w-full max-w-7xl mx-auto px-6">
-        <div className="bg-white rounded-3xl shadow-lg p-8">
-          <h2 className="text-4xl font-bold text-black mb-12 text-center">My skills</h2>
+        <div className=" rounded-3xl shadow-lg p-8">
+          <h2 className="text-4xl font-bold text-white mb-[6rem] text-center">My skills</h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-center justify-items-center">
             {skills.map((skill, index) => (
@@ -52,7 +58,9 @@ const Skills: React.FC = () => {
                   border-2 ${skill.borderColor}
                   p-3
                   relative overflow-hidden
-                `}>
+                `}
+                style={skill.name === 'Symfony' ? { borderColor: '#444444' } : {}}
+                >
                   <img 
                     src={skill.logo} 
                     alt={skill.name}

@@ -30,7 +30,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-[#0B0B12] text-white">
+    <section id="about" className=" bg-[#0B0B12] text-white">
       <div className="w-full max-w-7xl mx-auto px-6">
         <div className="rounded-3xl shadow-lg p-8">
           <div className="grid md:grid-cols-5 gap-12 items-center">
