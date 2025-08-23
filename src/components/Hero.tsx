@@ -1,10 +1,40 @@
 import React from 'react';
+import { Search } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
     <section id="home" className="min-h-screen flex items-center bg-[#0B0B12]">
       <div className="w-full max-w-7xl mx-auto px-6">
         <div className="bg-white rounded-3xl shadow-lg p-8">
+          {/* Top Header - Logo, Navigation, and Search in one row */}
+          <div className="flex items-center justify-between mb-8">
+            {/* Logo */}
+            <div className="text-xl font-bold text-black">
+              Anton F.
+            </div>
+
+            {/* Navigation Bar - Centered */}
+            <div className="bg-black rounded-full px-8 py-3 border border-gray-700">
+              <nav className="flex items-center justify-center space-x-8">
+                <a href="#home" className="text-white text-sm font-medium hover:text-gray-300 transition-colors bg-gray-800 px-4 py-1 rounded-full">Home</a>
+                <a href="#about" className="text-white text-sm font-medium hover:text-gray-300 transition-colors">About</a>
+                <a href="#portfolio" className="text-white text-sm font-medium hover:text-gray-300 transition-colors">Portfolio</a>
+                <a href="#hobby" className="text-white text-sm font-medium hover:text-gray-300 transition-colors">Hobby</a>
+                <a href="#contact" className="text-white text-sm font-medium hover:text-gray-300 transition-colors">Contact</a>
+              </nav>
+            </div>
+
+            {/* Search Bar */}
+            <div className="hidden md:flex items-center relative">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="w-48 h-9 px-4 pr-10 rounded-full bg-gray-100 border border-gray-300 text-black placeholder-gray-500 focus:outline-none focus:border-pink-500 transition-colors"
+              />
+              <Search className="absolute right-3 w-4 h-4 text-gray-500" />
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-10 items-center">
             {/* Left Column - Text */}
             <div className="space-y-6 animate-fadeInUp">
@@ -19,7 +49,7 @@ const Hero: React.FC = () => {
                   With impeccable experience from concept to layout, I bring your ideas to life with clean code.
                 </p>
               </div>
-              <button className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-full hover:shadow-[0_0_20px_rgba(147,51,234,0.7)] hover:scale-105 transition-all duration-300 active:scale-95">
+              <button className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-[0_0_20px_rgba(233,30,99,0.7)] hover:scale-105 transition-all duration-300 active:scale-95">
                 Learn more
                 <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
               </button>
@@ -35,7 +65,7 @@ const Hero: React.FC = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl -z-10 opacity-20"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl -z-10 opacity-20"></div>
               </div>
             </div>
           </div>
@@ -43,7 +73,7 @@ const Hero: React.FC = () => {
 
         {/* CV Tab - Positioned at bottom left */}
         <div className="relative mt-8">
-          <button className="bg-black text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-800 transition-all duration-300 shadow-lg border border-gray-700">
+          <button className="bg-white text-black px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 shadow-lg border border-gray-200">
             CV
           </button>
         </div>

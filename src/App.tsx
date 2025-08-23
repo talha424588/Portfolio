@@ -38,7 +38,7 @@ function App() {
       <div className="fixed inset-0 bg-gradient-to-br from-[#0B0B12] via-purple-900/20 to-pink-900/20 -z-10"></div>
       
       <Header />
-      <main className="pt-32">
+      <main>
         <Hero />
         <About />
         <Skills />
