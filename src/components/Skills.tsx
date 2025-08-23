@@ -43,7 +43,7 @@ const Skills: React.FC = () => {
               <div className={`
                 w-24 h-24 rounded-xl ${skill.bgColor}
                 flex flex-col items-center justify-center
-                hover:scale-105 hover:shadow-[0_0_20px_rgba(233,30,99,0.5)]
+                hover:scale-105 hover:shadow-[0_0_20px_rgba(147,51,234,0.5)]
                 transition-all duration-300 cursor-pointer
                 border border-gray-700 hover:border-transparent
               `}>

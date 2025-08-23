@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
                   With impeccable experience from concept to layout, I bring your ideas to life with clean code.
                 </p>
               </div>
-              <button className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-[0_0_20px_rgba(233,30,99,0.7)] hover:scale-105 transition-all duration-300 active:scale-95">
+              <button className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-full hover:shadow-[0_0_20px_rgba(147,51,234,0.7)] hover:scale-105 transition-all duration-300 active:scale-95">
                 Learn more
                 <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
               </button>
@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl -z-10 opacity-20"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl -z-10 opacity-20"></div>
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
 
         {/* CV Tab - Positioned at bottom left */}
         <div className="relative mt-8">
-          <button className="bg-white text-black px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 shadow-lg border border-gray-200">
+          <button className="bg-black text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-800 transition-all duration-300 shadow-lg border border-gray-700">
             CV
           </button>
         </div>

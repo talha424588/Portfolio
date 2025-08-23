@@ -76,7 +76,7 @@ const Projects: React.FC = () => {
                   ))}
                 </div>
 
-                <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-[0_0_20px_rgba(233,30,99,0.7)] hover:scale-105 transition-all duration-300 active:scale-95 font-sans">
+                <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-full hover:shadow-[0_0_20px_rgba(147,51,234,0.7)] hover:scale-105 transition-all duration-300 active:scale-95 font-sans">
                   See more
                   <span className="ml-2">→</span>
                 </button>
