@@ -48,37 +48,26 @@ const Skills: React.FC = () => {
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="group relative"
-              >
-                <div className={`
-                  w-28 h-28 rounded-xl bg-white
+                className={`
+                  w-28 h-28 rounded-xl 
                   flex flex-col items-center justify-center
-                  hover:scale-105
-                  transition-all duration-300 cursor-pointer
                   border-2 ${skill.borderColor}
-                  p-3
-                  relative overflow-hidden
+                  p-3 cursor-pointer
+                  transition-all duration-300
+                  hover:scale-105
                 `}
-                style={skill.name === 'Symfony' ? { borderColor: '#444444' } : {}}
-                >
-                  <img 
-                    src={skill.logo} 
-                    alt={skill.name}
-                    className="w-20 h-16 object-contain mb-1"
-                    style={{ zIndex: 1 }}
-                  />
-                  <p className="text-gray-800 text-xs font-medium text-center" style={{ zIndex: 1 }}>
-                    {skill.name}
-                  </p>
-                  {/* Glowing shadow effect */}
-                  <div 
-                    className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    style={{
-                      boxShadow: `0 0 20px ${skill.shadowColor}`,
-                      zIndex: -1
-                    }}
-                  ></div>
-                </div>
+                style={{
+                  boxShadow: `0 0 20px 4px ${skill.shadowColor}`,
+                }}
+              >
+                <img 
+                  src={skill.logo} 
+                  alt={skill.name}
+                  className="w-20 h-16 object-contain mb-1"
+                />
+                <p className="text-white text-xs font-medium text-center">
+                  {skill.name}
+                </p>
               </div>
             ))}
           </div>
