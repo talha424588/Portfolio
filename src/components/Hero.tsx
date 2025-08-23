@@ -1,5 +1,6 @@
 import React from 'react';
 import { Search } from 'lucide-react';
+import image from "../components/images/hero-image.png";
 
 const Hero: React.FC = () => {
   return (
@@ -58,11 +59,11 @@ const Hero: React.FC = () => {
             {/* Right Column - Image */}
             <div className="flex justify-center md:justify-end animate-fadeInUp animation-delay-300">
               <div className="relative">
-                <div className="w-80 h-96 md:w-96 md:h-[500px] rounded-2xl overflow-hidden">
+                <div className="w-80 h-96 md:w-96 md:h-[75vh] rounded-2xl overflow-hidden">
                   <img
-                    src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=600&fit=crop"
+                    src={image}
                     alt="Anton F. - Software Engineer"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl -z-10 opacity-20"></div>
