@@ -61,7 +61,7 @@ const About: React.FC = () => {
                         index === 1 ? 'bg-purple-500' : 
                         'bg-red-500'
                       }`}></div>
-                      {index < timelineData.length - 1 && (
+                      {index < timelineData.length  && (
                         <div className="w-0.5 h-16 bg-gray-300 mt-2"></div>
                       )}
                     </div>

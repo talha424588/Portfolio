@@ -1,32 +1,35 @@
 import React from 'react';
 
+// Import logo images
+import typescriptLogo from './skillLogo/Typescript_logo_2020.svg.png';
+import javascriptLogo from './skillLogo/JavaScript_logo_2.svg';
+import reactLogo from './skillLogo/React-icon.svg.png';
+import phpLogo from './skillLogo/PHP-logo.svg.png';
+import laravelLogo from './skillLogo/Laravel.svg.png';
+import mysqlLogo from './skillLogo/MySQL_textlogo.svg.png';
+import firebaseLogo from './skillLogo/firebase.png';
+import aspNetLogo from './skillLogo/asp.net_.webp';
+import socketIoLogo from './skillLogo/Socket-io.svg.png';
+
 interface Skill {
   name: string;
-  icon: React.ReactNode;
+  logo: string;
   category: string;
-  bgColor: string;
+  borderColor: string;
+  shadowColor: string;
 }
 
 const Skills: React.FC = () => {
   const skills: Skill[] = [
-    { name: 'TypeScript', icon: <span className="text-white font-bold text-lg">TS</span>, category: 'frontend', bgColor: 'bg-blue-600' },
-    { name: 'Photoshop', icon: <span className="text-white font-bold text-lg">Ps</span>, category: 'design', bgColor: 'bg-blue-700' },
-    { name: 'Premiere', icon: <span className="text-white font-bold text-lg">Pr</span>, category: 'design', bgColor: 'bg-purple-700' },
-    { name: 'Lightroom', icon: <span className="text-white font-bold text-lg">Lr</span>, category: 'design', bgColor: 'bg-blue-500' },
-    { name: 'Illustrator', icon: <span className="text-white font-bold text-lg">Ai</span>, category: 'design', bgColor: 'bg-orange-600' },
-    { name: 'NodeJS', icon: <span className="text-white font-bold text-lg">N</span>, category: 'backend', bgColor: 'bg-green-600' },
-    { name: 'React', icon: <span className="text-blue-400 font-bold text-lg">⚛</span>, category: 'frontend', bgColor: 'bg-gray-800' },
-    { name: 'Svelte', icon: <span className="text-white font-bold text-lg">S</span>, category: 'frontend', bgColor: 'bg-orange-500' },
-    { name: 'After Effects', icon: <span className="text-white font-bold text-lg">Ae</span>, category: 'design', bgColor: 'bg-purple-600' },
-    { name: 'Figma', icon: <span className="text-white font-bold text-lg">F</span>, category: 'design', bgColor: 'bg-red-500' },
-    { name: 'Sketch', icon: <span className="text-white font-bold text-lg">S</span>, category: 'design', bgColor: 'bg-yellow-500' },
-    { name: 'PostgreSQL', icon: <span className="text-white font-bold text-lg">P</span>, category: 'database', bgColor: 'bg-blue-800' },
-    { name: 'Next.js', icon: <span className="text-white font-bold text-lg">N</span>, category: 'frontend', bgColor: 'bg-black' },
-    { name: 'JavaScript', icon: <span className="text-black font-bold text-lg">JS</span>, category: 'frontend', bgColor: 'bg-yellow-400' },
-    { name: 'Redux', icon: <span className="text-white font-bold text-lg">R</span>, category: 'frontend', bgColor: 'bg-purple-600' },
-    { name: 'Redis', icon: <span className="text-white font-bold text-lg">R</span>, category: 'database', bgColor: 'bg-red-600' },
-    { name: 'Go', icon: <span className="text-white font-bold text-lg">Go</span>, category: 'backend', bgColor: 'bg-cyan-500' },
-    { name: 'MongoDB', icon: <span className="text-white font-bold text-lg">M</span>, category: 'database', bgColor: 'bg-green-700' }
+    { name: 'TypeScript', logo: typescriptLogo, category: 'frontend', borderColor: 'border-blue-500', shadowColor: 'rgba(59,130,246,0.6)' },
+    { name: 'JavaScript', logo: javascriptLogo, category: 'frontend', borderColor: 'border-yellow-400', shadowColor: 'rgba(245,158,11,0.6)' },
+    { name: 'React', logo: reactLogo, category: 'frontend', borderColor: 'border-blue-400', shadowColor: 'rgba(59,130,246,0.6)' },
+    { name: 'PHP', logo: phpLogo, category: 'backend', borderColor: 'border-purple-500', shadowColor: 'rgba(147,51,234,0.6)' },
+    { name: 'Laravel', logo: laravelLogo, category: 'backend', borderColor: 'border-red-500', shadowColor: 'rgba(239,68,68,0.6)' },
+    { name: 'MySQL', logo: mysqlLogo, category: 'database', borderColor: 'border-blue-600', shadowColor: 'rgba(59,130,246,0.6)' },
+    { name: 'Firebase', logo: firebaseLogo, category: 'database', borderColor: 'border-orange-500', shadowColor: 'rgba(249,115,22,0.6)' },
+    { name: 'ASP.NET', logo: aspNetLogo, category: 'backend', borderColor: 'border-purple-600', shadowColor: 'rgba(147,51,234,0.6)' },
+    { name: 'Socket.IO', logo: socketIoLogo, category: 'backend', borderColor: 'border-gray-500', shadowColor: 'rgba(107,114,128,0.6)' }
   ];
 
   return (
@@ -35,24 +38,39 @@ const Skills: React.FC = () => {
         <div className="bg-white rounded-3xl shadow-lg p-8">
           <h2 className="text-4xl font-bold text-black mb-12 text-center">My skills</h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-center justify-items-center">
             {skills.map((skill, index) => (
               <div
                 key={index}
                 className="group relative"
               >
                 <div className={`
-                  w-24 h-24 rounded-xl ${skill.bgColor}
+                  w-28 h-28 rounded-xl bg-white
                   flex flex-col items-center justify-center
-                  hover:scale-105 hover:shadow-[0_0_20px_rgba(147,51,234,0.5)]
+                  hover:scale-105
                   transition-all duration-300 cursor-pointer
-                  border border-gray-700 hover:border-transparent
+                  border-2 ${skill.borderColor}
+                  p-3
+                  relative overflow-hidden
                 `}>
-                  {skill.icon}
+                  <img 
+                    src={skill.logo} 
+                    alt={skill.name}
+                    className="w-20 h-16 object-contain mb-1"
+                    style={{ zIndex: 1 }}
+                  />
+                  <p className="text-gray-800 text-xs font-medium text-center" style={{ zIndex: 1 }}>
+                    {skill.name}
+                  </p>
+                  {/* Glowing shadow effect */}
+                  <div 
+                    className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{
+                      boxShadow: `0 0 20px ${skill.shadowColor}`,
+                      zIndex: -1
+                    }}
+                  ></div>
                 </div>
-                <p className="text-black text-sm font-medium mt-2 text-center">
-                  {skill.name}
-                </p>
               </div>
             ))}
           </div>

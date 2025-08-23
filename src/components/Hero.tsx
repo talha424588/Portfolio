@@ -5,7 +5,7 @@ import './hero/Hero.css';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center bg-[#0B0B12]">
+    <section id="home" className="min-h-screen flex items-center bg-[#0B0B12] pt-[50px]">
       <div className="w-full max-w-7xl mx-auto px-6">
         <div className="bg-white rounded-3xl shadow-lg p-8">
           {/* Top Header - Logo, Navigation, and Search in one row */}
