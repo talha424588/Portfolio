@@ -35,10 +35,7 @@ function App() {
   return (
     <div className="min-h-screen">
       {/* Background gradient */}
-      <div className="fixed inset-0 bg-gradient-to-br from-[#0B0B12] via-purple-900/30 to-pink-900/30 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(121,40,202,0.15)_0%,rgba(0,0,0,0)_70%)] -z-10"></div>
-        <div className="absolute top-1/4 left-1/4 w-1/2 h-1/2 bg-[radial-gradient(circle,rgba(255,0,128,0.1)_0%,rgba(0,0,0,0)_70%)] -z-10"></div>
-      </div>
+      <div className="fixed inset-0 bg-gradient-to-br from-[#0B0B12] via-purple-900/20 to-pink-900/20 -z-10"></div>
       
       <Header />
       <main>
