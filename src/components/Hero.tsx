@@ -1,6 +1,7 @@
 import React from 'react';
 import { Search } from 'lucide-react';
 import image from "../components/images/hero-image.png";
+import './hero/Hero.css';
 
 const Hero: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Navigation Bar - Centered */}
-            <div className="bg-black rounded-full px-8 py-3 border border-gray-700">
+            <div className="bg-black rounded-full border border-gray-700 navbar">
               <nav className="flex items-center justify-center space-x-8">
                 <a href="#home" className="text-white text-sm font-medium hover:text-gray-300 transition-colors bg-gray-800 px-4 py-1 rounded-full">Home</a>
                 <a href="#about" className="text-white text-sm font-medium hover:text-gray-300 transition-colors">About</a>
