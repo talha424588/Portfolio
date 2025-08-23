@@ -30,9 +30,9 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-24">
+    <section id="about" className="py-24 bg-[#0B0B12] text-white">
       <div className="w-full max-w-7xl mx-auto px-6">
-        <div className="bg-white rounded-3xl shadow-lg p-8">
+        <div className="rounded-3xl shadow-lg p-8">
           <div className="grid md:grid-cols-5 gap-12 items-center">
             {/* Left Column - Image */}
             <div className="md:col-span-2 flex justify-center">
@@ -50,7 +50,7 @@ const About: React.FC = () => {
 
             {/* Right Column - Timeline */}
             <div className="md:col-span-3">
-              <h2 className="text-4xl font-bold text-black mb-12">About me</h2>
+              <h2 className="text-4xl font-bold mb-12">About me</h2>
               <div className="space-y-8">
                 {timelineData.map((item, index) => (
                   <div key={index} className="flex items-start space-x-6">
@@ -69,7 +69,7 @@ const About: React.FC = () => {
                     {/* Content */}
                     <div className="flex-1 pb-8">
                       <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-bold text-black">{item.title}</h3>
+                        <h3 className="text-xl font-bold">{item.title}</h3>
                         <span className="text-sm text-gray-600 font-medium">{item.period}</span>
                       </div>
                       <p className="text-gray-600 mb-2 text-sm">{item.subtitle}</p>
