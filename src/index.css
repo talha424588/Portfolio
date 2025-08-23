@@ -12,6 +12,8 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #0B0B12;
+    color: white;
   }
 }
 

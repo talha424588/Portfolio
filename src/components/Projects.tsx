@@ -34,57 +34,59 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-24">
-      <div className="w-full max-w-7xl mx-auto px-6">
-        <div className="bg-white rounded-3xl shadow-lg p-8">
-          <h2 className="text-4xl font-bold text-black mb-16 font-sans">My projects</h2>
-          
-          <div className="space-y-24">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className={`grid md:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? 'md:grid-flow-col-dense' : ''
-                }`}
-              >
-                {/* Project Image */}
-                <div className={`${index % 2 === 1 ? 'md:col-start-2' : ''} group`}>
-                  <div className="relative overflow-hidden rounded-2xl">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </div>
-                </div>
-
-                {/* Project Info */}
-                <div className={`space-y-6 ${index % 2 === 1 ? 'md:col-start-1' : ''}`}>
-                  <div>
-                    <h3 className="text-2xl font-bold text-black mb-4 font-sans">{project.title}</h3>
-                    <p className="text-gray-600 text-base leading-relaxed mb-6 font-sans">{project.subtitle}</p>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-full border border-gray-700 font-sans"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-full hover:shadow-[0_0_20px_rgba(147,51,234,0.7)] hover:scale-105 transition-all duration-300 active:scale-95 font-sans">
-                    See more
-                    <span className="ml-2">→</span>
-                  </button>
+    <section id="portfolio" className="py-24 relative">
+      {/* Background radial gradient for projects section */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(121,40,202,0.3)_0%,rgba(0,0,0,0)_70%)] pointer-events-none"></div>
+      
+      <div className="w-full max-w-7xl mx-auto px-6 relative z-10">
+        <h2 className="text-4xl font-bold text-white mb-16 font-sans">My projects</h2>
+        
+        <div className="space-y-32">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className={`grid md:grid-cols-2 gap-12 items-center ${
+                index % 2 === 1 ? 'md:grid-flow-col-dense' : ''
+              }`}
+            >
+              {/* Project Image */}
+              <div className={`${index % 2 === 1 ? 'md:col-start-2' : ''} group relative`}>
+                <div className="absolute -inset-1 bg-gradient-to-r from-fuchsia-600 to-violet-600 rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-300"></div>
+                <div className="relative overflow-hidden rounded-2xl bg-black/20 backdrop-blur-sm p-1">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
-            ))}
-          </div>
+
+              {/* Project Info */}
+              <div className={`space-y-6 ${index % 2 === 1 ? 'md:col-start-1' : ''}`}>
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-4 font-sans">{project.title}</h3>
+                  <p className="text-gray-300 text-base leading-relaxed mb-6 font-sans">{project.subtitle}</p>
+                </div>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="px-4 py-2 text-sm font-medium text-white bg-gray-800/50 backdrop-blur-sm rounded-full border border-gray-700/50 font-sans"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#ff0080] to-[#7928ca] text-white font-semibold rounded-full hover:shadow-[0_0_20px_rgba(255,0,128,0.7)] hover:scale-105 transition-all duration-300 active:scale-95 font-sans">
+                  Learn more
+                  <span className="ml-2">→</span>
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
