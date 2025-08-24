@@ -36,8 +36,8 @@ const Projects: React.FC = () => {
   return (
     <section id="portfolio" className="py-24">
       <div className="w-full max-w-7xl mx-auto px-6">
-        <div className="bg-white rounded-3xl shadow-lg p-8">
-          <h2 className="text-4xl font-bold text-black mb-16 font-sans">My projects</h2>
+        <div className="p-8">
+          <h2 className="text-4xl font-bold text-white mb-16 font-sans">My projects</h2>
           
           <div className="space-y-24">
             {projects.map((project, index) => (
@@ -62,7 +62,7 @@ const Projects: React.FC = () => {
                 {/* Project Info */}
                 <div className={`space-y-6 ${index % 2 === 1 ? 'md:col-start-1' : ''}`}>
                   <div>
-                    <h3 className="text-2xl font-bold text-black mb-4 font-sans">{project.title}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-4 font-sans">{project.title}</h3>
                     <p className="text-gray-600 text-base leading-relaxed mb-6 font-sans">{project.subtitle}</p>
                   </div>
 

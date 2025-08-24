@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="min-h-screen">
       {/* Background gradient */}
-      <div className="fixed inset-0 bg-gradient-to-br from-[#0B0B12] via-purple-900/20 to-pink-900/20 -z-10"></div>
+      <div className="fixed inset-0 bg-gradient-to-br bg-[#0B0B12] via-purple-900/20 to-pink-900/20 -z-10"></div>
       
       <Header />
       <main>
