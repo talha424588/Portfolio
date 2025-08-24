@@ -54,14 +54,14 @@ const About: React.FC = () => {
               <h2 className="text-4xl font-bold mb-12">About me</h2>
               <div className="relative">
                 {/* Timeline line - extends from point 1 through point 2 to point 3 */}
-                <div className="absolute left-3 top-0 h-[24rem] w-0.5 bg-gradient-to-b from-purple-400 via-pink-500 to-red-500"></div>
+                <div className="absolute left-3 top-0 h-[26rem] w-0.5 bg-gradient-to-b from-purple-400 via-pink-500 to-red-500"></div>
                 
                 <div className="space-y-8">
                   {timelineData.map((item, index) => (
                     <div key={index} className="flex items-start space-x-6 relative">
                       {/* Timeline marker */}
                       <div className="flex flex-col items-center relative z-10">
-                        <div className={`w-6 h-6 rounded-full border-2 border-white shadow-lg ${
+                        <div className={`w-6 h-6 rounded-full  border-white shadow-lg ${
                           index === 0 ? 'bg-gradient-to-r from-purple-400 to-pink-500' : 
                           index === 1 ? 'bg-gradient-to-r from-pink-500 to-red-500' : 
                           'bg-gradient-to-r from-red-500 to-orange-500'
