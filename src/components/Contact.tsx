@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="min-h-[80vh] bg-gradient-to-r from-purple-600 via-purple-800 to-gray-900 relative overflow-hidden">
+    <section id="contact" className="min-h-[60vh] relative overflow-hidden">
       {/* Header */}
       <div className="pt-16 pb-8">
         <div className="max-w-7xl mx-auto px-6">

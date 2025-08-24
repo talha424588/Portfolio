@@ -58,9 +58,9 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Right Column - Image */}
-            <div className="flex justify-center md:justify-end animate-fadeInUp animation-delay-300">
+            <div className="flex justify-center md:justify-center animate-fadeInUp animation-delay-300">
               <div className="relative">
-                <div className="w-80 h-96 md:w-96 md:h-[75vh] rounded-2xl overflow-hidden">
+                <div className="w-80  rounded-2xl overflow-hidden">
                   <img
                     src={image}
                     alt="Anton F. - Software Engineer"
@@ -74,11 +74,11 @@ const Hero: React.FC = () => {
         </div>
 
         {/* CV Tab - Positioned at bottom left */}
-        <div className="relative mt-8">
+        {/* <div className="relative mt-8">
           <button className="bg-white text-black px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 shadow-lg border border-gray-200">
             CV
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

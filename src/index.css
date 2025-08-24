@@ -12,6 +12,8 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+     -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
   }
   
   .font-handwriting {
@@ -46,7 +48,7 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  display: none;
 }
 
 ::-webkit-scrollbar-track {
