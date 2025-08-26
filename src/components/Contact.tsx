@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import catImage from "./images/cat.png";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -50,13 +51,7 @@ const Contact: React.FC = () => {
           <div className="relative">
             {/* Large Cat Image */}
             <div className="relative mb-8">
-              <div className="w-96 h-96 bg-gradient-to-br from-purple-400/40 to-purple-600/40 rounded-full flex items-center justify-center relative">
-                <div className="w-80 h-80 bg-gray-700 rounded-full flex items-center justify-center shadow-2xl">
-                  <div className="text-6xl transform rotate-12">🐱</div>
-                </div>
-                {/* Purple gradient glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-400/30 to-purple-600/30 rounded-full blur-xl"></div>
-              </div>
+              <img src={catImage} alt="Cat" className="w-full max-w-lg object-contain mr-auto" />
             </div>
 
             {/* Text with Arrow */}
@@ -210,3 +205,4 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+
