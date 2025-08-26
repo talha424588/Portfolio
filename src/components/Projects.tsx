@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-24">
+     <section id="portfolio" className="py-24" style={{ background: 'linear-gradient(135deg, #0d0d1a 0%, #1a0033 40%, #330011 100%)' }}>
       <div className="w-full max-w-7xl mx-auto px-6">
         <div className="p-8">
           <h2 className="text-4xl font-bold text-white mb-16 font-sans">My projects</h2>
