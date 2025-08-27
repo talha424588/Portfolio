@@ -53,7 +53,6 @@ const Hero: React.FC = () => {
               </div>
               <button className="group inline-flex items-center px-8 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-[0_0_20px_rgba(233,30,99,0.7)] hover:scale-105 transition-all duration-300 active:scale-95"  style={{ background: 'linear-gradient(135deg, #FF0000, #0400FF)' }}>
                 Learn more
-                <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
               </button>
             </div>
 
