@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 pb-16">
         {/* <div className="grid lg:grid-cols-2 gap-12 items-center"> */}
-        <div className="grid lg:grid-cols-2 gap-12 ">
+        <div className="grid lg:grid-cols-2 gap-12 lg:items-center">
           {/* Left Side - Cat and Text */}
           <div className="relative">
             {/* Large Cat Image */}
@@ -129,7 +129,7 @@ const Contact: React.FC = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={4}
-                    className="w-full px-4 py-3 bg-white/10 borde-0 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white/10 border-0 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none transition-all duration-300"
                     required
                   />
                 </div>
@@ -144,8 +144,8 @@ const Contact: React.FC = () => {
               </form>
 
               {/* Peeking Cat */}
+              <img src={catEyes} alt="Cat eyes" className="absolute -bottom-8 left-0 right-0 mx-auto h-auto pointer-events-none select-none" />
             </div>
-              <img src={catEyes} alt="Cat eyes" className="absolute  left-0 right-0 mx-auto h-auto pointer-events-none select-none" />
           </div>
 
         </div>
