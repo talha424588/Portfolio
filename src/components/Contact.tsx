@@ -27,14 +27,14 @@ const Contact: React.FC = () => {
   return (
     // <section id="contact" className="min-h-[60vh] relative overflow-hidden">
     <section
-  id="contact"
-  className="min-h-[60vh] relative overflow-hidden"
-  style={{
-    background: `radial-gradient(60% 40% at 10% 10%, rgba(4,0,255,.25) 0%, transparent 60%),
+      id="contact"
+      className="min-h-[60vh] relative overflow-hidden"
+      style={{
+        background: `radial-gradient(60% 40% at 10% 10%, rgba(4,0,255,.25) 0%, transparent 60%),
                  radial-gradient(50% 35% at 90% 80%, rgba(255,0,0,.22) 0%, transparent 60%),
                  linear-gradient(135deg, #0b0f16 0%, #140a1f 35%, #1a0a1a 100%)`
-  }}
->
+      }}
+    >
       {/* Header */}
       <div className="pt-16 pb-8">
         <div className="max-w-7xl mx-auto px-6">
@@ -66,82 +66,91 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-gray-800 rounded-2xl p-8 shadow-xl relative">
-            <h2 className="text-2xl font-bold text-white mb-6 font-sans">
-              Get in touch today
-            </h2>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-white text-sm font-medium mb-2"
+          <div className="relative max-w-xl mx-auto">
+            <div className="bg-gray-900/40 backdrop-blur-xl rounded-2xl p-8 shadow-2xl border border-white/10">
+              <h2 className="text-2xl font-bold text-white mb-8 font-sans text-center">
+                Get in touch today
+              </h2>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Name + Email aligned in grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-white text-sm font-medium mb-2"
+                    >
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Anton Filkas"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-white text-sm font-medium mb-2"
+                    >
+                      E-mail
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="anton.fil@email.com"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                      required
+                    />
+                  </div>
+                </div>
+
+                {/* Message */}
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-white text-sm font-medium mb-2"
+                  >
+                    Leave us a message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Please type your message here..."
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    rows={4}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none transition-all duration-300"
+                    required
+                  />
+                </div>
+
+                {/* Button */}
+                <button
+                  type="submit"
+                  className="w-full bg-white text-gray-800 font-semibold py-3 px-6 rounded-full hover:bg-gray-100 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                 >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Anton Filkas"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
-                  required
-                />
+                  Send message
+                </button>
+              </form>
+
+              {/* Peeking Cat */}
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
+                <div className="text-5xl animate-bounce">🐱</div>
               </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-white text-sm font-medium mb-2"
-                >
-                  E-mail
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="anton.fil@email.com"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
-                  required
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-white text-sm font-medium mb-2"
-                >
-                  Leave us a message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Please type your message here..."
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  rows={4}
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none transition-all duration-300"
-                  required
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-white text-gray-800 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Send message
-              </button>
-            </form>
-
-            {/* Peeking Cat */}
-            <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
-              <div className="text-4xl animate-bounce">🐱</div>
             </div>
           </div>
+
         </div>
       </div>
 
