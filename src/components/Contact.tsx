@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import catImage from "./images/cat.png";
+import catEyes from "./images/cat_eyes.png";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -46,7 +47,8 @@ const Contact: React.FC = () => {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 pb-16">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* <div className="grid lg:grid-cols-2 gap-12 items-center"> */}
+        <div className="grid lg:grid-cols-2 gap-12 ">
           {/* Left Side - Cat and Text */}
           <div className="relative">
             {/* Large Cat Image */}
@@ -68,7 +70,7 @@ const Contact: React.FC = () => {
           {/* Right Side - Contact Form */}
 
           <div className="relative max-w-xl mx-auto">
-            <div className="bg-gray-900/40 backdrop-blur-xl rounded-2xl p-8 shadow-2xl border border-white/10">
+            <div className="relative bg-gray-900/40 backdrop-blur-xl rounded-2xl p-8 shadow-2xl border border-white/10">
               <h2 className="text-2xl font-bold text-white mb-8 font-sans text-center">
                 Get in touch today
               </h2>
@@ -145,17 +147,15 @@ const Contact: React.FC = () => {
               </form>
 
               {/* Peeking Cat */}
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2">
-                <div className="text-5xl animate-bounce">🐱</div>
-              </div>
             </div>
+              <img src={catEyes} alt="Cat eyes" className="absolute  left-0 right-0 mx-auto h-auto pointer-events-none select-none" />
           </div>
 
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900/80 py-8 mt-16">
+      <footer className="bg-gray-900/80 ">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             {/* Left Side */}
