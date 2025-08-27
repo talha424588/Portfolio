@@ -61,9 +61,6 @@ const Contact: React.FC = () => {
               <p className="text-white text-2xl font-handwriting mb-6 leading-relaxed">
                 My friend is waiting for your letters
               </p>
-              <div className="flex justify-center lg:justify-start items-center">
-                <span className="text-white text-3xl animate-pulse">→</span>
-              </div>
             </div>
           </div>
 
