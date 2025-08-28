@@ -144,8 +144,8 @@ const Contact: React.FC = () => {
               </form>
 
               {/* Peeking Cat */}
-              <img src={catEyes} alt="Cat eyes" className="absolute -bottom-8 left-0 right-0 mx-auto h-auto pointer-events-none select-none" />
             </div>
+              <img src={catEyes} alt="Cat eyes" className="absolute left-0 right-0 mx-auto h-auto pointer-events-none select-none" />
           </div>
 
         </div>
@@ -187,9 +187,9 @@ const Contact: React.FC = () => {
             </nav>
 
             {/* Download CV Button */}
-             <button className="group inline-flex items-center px-8 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-[0_0_20px_rgba(233,30,99,0.7)] hover:scale-105 transition-all duration-300 active:scale-95"  style={{ background: 'linear-gradient(135deg, #FF0000, #0400FF)' }}>
-                Download CV
-              </button>
+            <button className="group inline-flex items-center px-8 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-[0_0_20px_rgba(233,30,99,0.7)] hover:scale-105 transition-all duration-300 active:scale-95" style={{ background: 'linear-gradient(135deg, #FF0000, #0400FF)' }}>
+              Download CV
+            </button>
           </div>
 
           {/* Bottom Row */}
