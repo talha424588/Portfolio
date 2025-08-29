@@ -84,8 +84,8 @@ const Hero: React.FC = () => {
           </div> */}
 
           <div className="absolute bottom-2 left-2">
-            <div className="bg-black w-32 h-24 rounded-tr-[50px] rounded-bl-[50px] relative z-0 transform rotate-180 origin-center">
-              <div className="absolute bottom-2 left-2 bg-white w-28 h-20 rounded-tr-[40px] rounded-bl-[40px] flex items-center justify-center border border-gray-200 shadow-md">
+            <div className="bg-black w-32 h-24 rounded-tr-[50px] rounded-bl-[50px] relative z-0 transform  origin-center">
+              <div className="absolute bottom-2 left-2 bg-white w-28 h-20 rounded-tr-[40px] rounded-bl-[40px] rounded-br-[10px] rounded-tl-[10px] flex items-center justify-center border border-gray-200 shadow-md">
                 <span className="font-semibold text-black">CV</span>
               </div>
             </div>
