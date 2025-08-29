@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="min-h-screen flex items-center bg-[#0B0B12] pt-[50px]">
       <div className="w-full max-w-7xl mx-auto px-6">
-        <div className="bg-white rounded-3xl shadow-lg p-8">
+        <div className="relative bg-white rounded-3xl shadow-lg p-8 overflow-hidden">
           {/* Top Header - Logo, Navigation, and Search in one row */}
           <div className="flex items-center justify-between mb-8">
             {/* Logo */}
@@ -51,7 +51,10 @@ const Hero: React.FC = () => {
                   With impeccable experience from concept to layout, I bring your ideas to life with clean code.
                 </p>
               </div>
-              <button className="group inline-flex items-center px-8 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-[0_0_20px_rgba(233,30,99,0.7)] hover:scale-105 transition-all duration-300 active:scale-95"  style={{ background: 'linear-gradient(135deg, #FF0000, #0400FF)' }}>
+              <button
+                className="group inline-flex items-center px-8 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-[0_0_20px_rgba(233,30,99,0.7)] hover:scale-105 transition-all duration-300 active:scale-95"
+                style={{ background: 'linear-gradient(135deg, #FF0000, #0400FF)' }}
+              >
                 Learn more
               </button>
             </div>
@@ -59,7 +62,7 @@ const Hero: React.FC = () => {
             {/* Right Column - Image */}
             <div className="flex justify-center md:justify-center animate-fadeInUp animation-delay-300">
               <div className="relative">
-                <div className="w-80  rounded-2xl overflow-hidden">
+                <div className="w-80 rounded-2xl overflow-hidden">
                   <img
                     src={image}
                     alt="Anton F. - Software Engineer"
@@ -70,14 +73,18 @@ const Hero: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
 
-        {/* CV Tab - Positioned at bottom left */}
-        {/* <div className="relative mt-8">
-          <button className="bg-white text-black px-6 py-3 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 shadow-lg border border-gray-200">
-            CV
-          </button>
-        </div> */}
+          {/* CV Curved Tab - Bottom Left */}
+          <div className="absolute bottom-0 left-0">
+            {/* Outer curve (black) */}
+            <div className="bg-black w-28 h-20 rounded-tr-[100px] relative">
+              {/* Inner curve (white with border) */}
+              <div className="absolute bottom-0 left-0 bg-white w-24 h-16 rounded-tr-[80px] flex items-center justify-center border border-gray-200 shadow-md">
+                <span className="font-semibold text-black">CV</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
