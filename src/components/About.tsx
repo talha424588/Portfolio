@@ -1,6 +1,7 @@
 import React from 'react';
 
-import aboutMe from '../components/images/about_us.jpg';
+import aboutMe from '../components/images/about_us.png';
+import aboutMe2 from '../components/images/about_me_2.png';
 
 interface TimelineItem {
   title: string;
@@ -39,15 +40,15 @@ const About: React.FC = () => {
             {/* Left Column - Image */}
             <div className="md:col-span-2 flex justify-center">
               <div className="relative">
-                <div className="w-72 h-72 rounded-full overflow-hidden shadow-lg">
+                <div className="w-72 h-72 overflow-hidden shadow-lg">
                   <img
-                    src={aboutMe} // Replace with the actual URL of IMG_2
+                    src={aboutMe2}
                     alt="Person with Cat - About Me"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="absolute inset-0">
-                  <div className="absolute -inset-8 bg-white rounded-[50%_50%_30%_70%/60%_40%_60%_40%] opacity-50 -z-10"></div>
+                  <div className="absolute -inset-8 bg-white rounded-[50%_50%_30%_70%/60%_40%_60%_40%]  -z-10"></div>
                 </div>
               </div>
             </div>
@@ -61,7 +62,7 @@ const About: React.FC = () => {
                     position: 'absolute',
                     left: '0.25rem',
                     top: '0.375rem',
-                    height: '19rem',
+                    height: '20rem',
                     width: '0.125rem',
                     background: 'linear-gradient(to bottom, #0400FF, #FF0000)',
                   }}
