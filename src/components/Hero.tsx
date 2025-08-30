@@ -5,17 +5,14 @@ import './hero/Hero.css';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center bg-[#0B0B12] pt-[50px]">
-      <div className="w-full max-w-7xl mx-auto px-6">
+    <section id="home" className="min-h-screen flex items-center bg-[#0B0B12] pt-[50px] pb-[20px] relative">
+      <div className="w-full max-w-7xl mx-auto px-6 relative">
+        {/* White Card */}
         <div className="relative bg-white rounded-3xl shadow-lg p-8 overflow-hidden">
-          {/* Top Header - Logo, Navigation, and Search in one row */}
+          {/* Top Header - Logo, Navigation, and Search */}
           <div className="flex items-center justify-between mb-8">
-            {/* Logo */}
-            <div className="text-xl font-bold text-black">
-              Anton F.
-            </div>
+            <div className="text-xl font-bold text-black">Anton F.</div>
 
-            {/* Navigation Bar - Centered */}
             <div className="bg-black rounded-full border border-gray-700 navbar">
               <nav className="flex items-center justify-center space-x-8">
                 <a href="#home" className="text-white text-sm font-medium hover:text-gray-300 transition-colors bg-gray-800 px-4 py-1 rounded-full">Home</a>
@@ -26,7 +23,6 @@ const Hero: React.FC = () => {
               </nav>
             </div>
 
-            {/* Search Bar */}
             <div className="hidden md:flex items-center relative">
               <input
                 type="text"
@@ -38,7 +34,7 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-10 items-center">
-            {/* Left Column - Text */}
+            {/* Left Column */}
             <div className="space-y-6 animate-fadeInUp">
               <h1 className="text-5xl md:text-6xl font-bold text-black leading-tight">
                 Anton F.
@@ -59,7 +55,7 @@ const Hero: React.FC = () => {
               </button>
             </div>
 
-            {/* Right Column - Image */}
+            {/* Right Column */}
             <div className="flex justify-center md:justify-center animate-fadeInUp animation-delay-300">
               <div className="relative">
                 <div className="w-80 rounded-2xl overflow-hidden">
@@ -73,12 +69,21 @@ const Hero: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-2 left-2">
-            <div className="bg-[#0B0B12] w-32 h-14 rounded-tr-[50px] rounded-bl-[50px] rounded-br-[5px] relative z-0 transform  origin-center">
-              <div className="absolute bottom-2 left-2 bg-white w-28 h-10 rounded-tr-[40px] rounded-bl-[40px] rounded-br-[10px] rounded-tl-[10px] flex items-center justify-center border border-gray-200 shadow-md">
-                <span className="font-semibold text-black">CV</span>
-              </div>
-            </div>
+        </div>
+
+        {/* CV Badge outside the white box */}
+        <div className="absolute -bottom-4 left-4">
+          <div className="bg-[#0B0B12] w-32 h-14 rounded-tr-[50px] rounded-bl-[50px] rounded-br-[5px] relative z-0">
+            {/* <div className="absolute bottom-2 left-2 bg-white w-28 h-10 rounded-tr-[40px] rounded-bl-[40px] rounded-br-[10px] rounded-tl-[10px] flex items-center justify-center border border-gray-200 shadow-md bg-gradient-to-r from-red-500 to-blue-500 shadow-md">
+              <span className="font-semibold text-black">CV</span>
+            </div> */}
+
+            <div className="absolute bottom-2 left-2 w-28 h-10 rounded-tr-[40px] rounded-bl-[40px] rounded-br-[10px] rounded-tl-[10px] flex items-center justify-center shadow-md border-1 border-transparent bg-gradient-to-r from-red-500 to-blue-500 p-[1px]">
+  <div className="w-full h-full flex items-center justify-center bg-white rounded-tr-[38px] rounded-bl-[38px] rounded-br-[8px] rounded-tl-[8px]">
+    <span className="font-semibold text-black">CV</span>
+  </div>
+</div>
+
           </div>
         </div>
       </div>
