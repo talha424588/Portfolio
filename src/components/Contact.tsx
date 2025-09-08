@@ -50,25 +50,50 @@ const Contact: React.FC = () => {
         {/* <div className="grid lg:grid-cols-2 gap-12 items-center"> */}
         <div className="grid lg:grid-cols-2 gap-12 lg:items-center">
           {/* Left Side - Cat and Text */}
-          <div className="relative">
+          <div className="relative flex">
             {/* Large Cat Image */}
-            <div className="relative mb-8">
+            <div className="relative">
+            {/* <div className="relative mb-8"> */}
               <img src={catImage} alt="Cat" className="w-full max-w-lg object-contain mr-auto" />
             </div>
 
             {/* Text with Arrow */}
-            <div className="text-center lg:text-left">
-              <p className="text-white text-2xl font-handwriting mb-6 leading-relaxed">
-                My friend is waiting for your letters
+            <div className="text-center lg:text-left relative inline-block">
+              <p className="text-white text-2xl font-handwriting mb-2 leading-relaxed">
+                My friend is waiting
+                <br />
+                for your letters
               </p>
+              {/* Arrow */}
+              <svg
+                className="hidden lg:block absolute left-1/2 -translate-x-1/2 text-white"
+                width="52"
+                height="38"
+                viewBox="0 0 52 38"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M2 20C14 12 24 12 36 20" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
+                <path d="M35 20L44 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
+                <path d="M35 20L50 21" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
+              </svg>
             </div>
           </div>
 
           {/* Right Side - Contact Form */}
 
           <div className="relative max-w-xl mx-auto">
-            <div className="relative bg-gray-900/40 backdrop-blur-xl rounded-2xl p-8 shadow-2xl border border-white/10">
+            <div className="relative bg-gray-900/40 backdrop-blur-xl rounded-2xl p-8 shadow-2xl border border-white/10 overflow-hidden">
+              {/* Spotlight gradient inside the card */}
+              <div
+                className="pointer-events-none absolute inset-0 rounded-2xl"
+                style={{
+                  background:
+                    'radial-gradient(40% 35% at 50% 65%, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.08) 40%, rgba(255,255,255,0.00) 100%)'
+                }}
+              />
               <h2 className="text-2xl font-bold text-white mb-8 font-sans text-center">
+              {/* <h2 className="text-2xl font-bold text-white mb-8 font-sans text-center"> */}
                 Get in touch today
               </h2>
 
@@ -145,7 +170,11 @@ const Contact: React.FC = () => {
 
               {/* Peeking Cat */}
             </div>
-              <img src={catEyes} alt="Cat eyes" className="absolute left-0 right-0 mx-auto h-auto pointer-events-none select-none" />
+              <img
+                src={catEyes}
+                alt="Cat peeking"
+                className="absolute left-1/2 -translate-x-1/2  h-auto pointer-events-none select-none"
+              />
           </div>
 
         </div>
