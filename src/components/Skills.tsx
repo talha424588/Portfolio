@@ -42,7 +42,7 @@ const Skills: React.FC = () => {
     <section id="skills" className=" bg-[#0B0B12]">
       <div className="w-full max-w-7xl mx-auto px-6">
         <div className=" rounded-3xl shadow-lg p-8">
-          <h2 className="text-4xl font-bold text-white mb-[6rem] text-center">My skills</h2>
+          <h2 className="text-6xl font-bold text-white mb-[6rem] text-center">My skills</h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-center justify-items-center">
             {skills.map((skill, index) => (
@@ -51,7 +51,7 @@ const Skills: React.FC = () => {
                 className={`
                   w-28 h-28 rounded-xl 
                   flex flex-col items-center justify-center
-                  border-2 ${skill.borderColor}
+                  border ${skill.borderColor}
                   p-3 cursor-pointer
                   transition-all duration-300
                   hover:scale-105
