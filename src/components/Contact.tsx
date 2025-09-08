@@ -67,15 +67,15 @@ const Contact: React.FC = () => {
               {/* Arrow */}
               <svg
                 className="hidden lg:block absolute left-1/2 -translate-x-1/2 text-white"
-                width="52"
-                height="38"
-                viewBox="0 0 52 38"
+                width="80"
+                height="60"
+                viewBox="0 0 80 60"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M2 20C14 12 24 12 36 20" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
-                <path d="M35 20L44 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
-                <path d="M35 20L50 21" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
+                <path d="M74 22C56 16 40 18 12 30" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M12 30L22 20" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M12 30L22 40" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
           </div>
