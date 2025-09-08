@@ -1,7 +1,6 @@
 import React from 'react';
 
-import aboutMe from '../components/images/about_us.png';
-import aboutMe2 from '../components/images/about_me_2.png';
+import aboutMe from '../components/images/about_me_1.png';
 
 interface TimelineItem {
   title: string;
@@ -40,9 +39,10 @@ const About: React.FC = () => {
             {/* Left Column - Image */}
             <div className="md:col-span-2 flex justify-center">
               <div className="relative">
-                <div className="w-72 h-72 overflow-hidden shadow-lg">
+                {/* <div className="w-72 h-72 overflow-hidden shadow-lg"> */}
+                <div className="w-72 h-72 overflow-hidden">
                   <img
-                    src={aboutMe2}
+                    src={aboutMe}
                     alt="Person with Cat - About Me"
                     className="w-full h-full object-cover"
                   />
