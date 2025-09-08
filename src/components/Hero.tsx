@@ -1,14 +1,26 @@
 import React from 'react';
 import { Search } from 'lucide-react';
 import image from "../components/images/hero-image.png";
+import background from "../components/images/background_2.jpg";
 import './hero/Hero.css';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center bg-[#0B0B12] pt-[50px] pb-[20px] relative">
+    <section
+      id="home"
+      className="min-h-screen flex items-center bg-[#0B0B12] pt-[50px] pb-[20px] relative"
+    >
       <div className="w-full max-w-7xl mx-auto px-6 relative">
         {/* White Card */}
-        <div className="relative bg-white rounded-3xl shadow-lg p-8 overflow-hidden">
+        <div
+          className="relative bg-white rounded-3xl shadow-lg p-8 overflow-hidden"
+          style={{
+            backgroundImage: `url(${background})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
           {/* Top Header - Logo, Navigation, and Search */}
           <div className="flex items-center justify-between mb-8">
             <div className="text-xl font-bold text-black">Anton F.</div>
