@@ -26,16 +26,19 @@ const Contact: React.FC = () => {
   };
 
   return (
-    // <section id="contact" className="min-h-[60vh] relative overflow-hidden">
+    <>
+    {/* <section id="contact" className="min-h-[60vh] relative overflow-hidden"> */}
     <section
       id="contact"
       className="min-h-[60vh] relative overflow-hidden"
       style={{
-        background: `radial-gradient(60% 40% at 10% 10%, rgba(4,0,255,.25) 0%, transparent 60%),
-                 radial-gradient(50% 35% at 90% 80%, rgba(255,0,0,.22) 0%, transparent 60%),
-                 linear-gradient(268deg, #0b0f16 0%, #140a1f 35%, #1a0a1a 100%)`
+        background: `
+                 radial-gradient(38% 45% at 32% 62%, rgba(170,0,120,0.55) 0%, rgba(98,0,234,0.40) 30%, rgba(98,0,234,0.00) 70%),
+                 radial-gradient(60% 40% at 22% 20%, rgba(62,0,160,0.35) 0%, rgba(62,0,160,0.00) 55%),
+                 linear-gradient(268deg, #07090d 0%, #0b0f16 35%, #0b0810 100%)`
       }}
     >
+      
       {/* Header */}
       <div className="pt-16 pb-8">
         <div className="max-w-7xl mx-auto px-6">
@@ -180,62 +183,63 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-gray-900/80 ">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-            {/* Left Side */}
-            <div className="text-white font-semibold text-lg">Anton F.</div>
-
-            {/* Navigation Links */}
-            <nav className="flex flex-wrap justify-center gap-6">
-              <a
-                href="#about"
-                className="text-white hover:text-purple-300 transition-colors duration-300 font-sans"
-              >
-                About me
-              </a>
-              <a
-                href="#skills"
-                className="text-white hover:text-purple-300 transition-colors duration-300 font-sans"
-              >
-                My skills
-              </a>
-              <a
-                href="#portfolio"
-                className="text-white hover:text-purple-300 transition-colors duration-300 font-sans"
-              >
-                My side projects
-              </a>
-              <a
-                href="#contact"
-                className="text-white hover:text-purple-300 transition-colors duration-300 font-sans"
-              >
-                Contact me
-              </a>
-            </nav>
-
-            {/* Download CV Button */}
-            <button className="group inline-flex items-center px-8 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-[0_0_20px_rgba(233,30,99,0.7)] hover:scale-105 transition-all duration-300 active:scale-95" style={{ background: 'linear-gradient(135deg, #FF0000, #0400FF)' }}>
-              Download CV
-            </button>
-          </div>
-
-          {/* Bottom Row */}
-          <div className="flex flex-col lg:flex-row justify-between items-center mt-6 pt-6 border-t border-gray-700">
-            <p className="text-gray-400 text-sm font-sans">
-              All rights reserved
-            </p>
-            <a
-              href="mailto:antonfil.job@gmail.com"
-              className="text-gray-400 text-sm hover:text-white transition-colors duration-300 font-sans"
-            >
-              antonfil.job@gmail.com
-            </a>
-          </div>
-        </div>
-      </footer>
     </section>
+    {/* Footer moved outside the contact section so it keeps its own background */}
+    <footer className="bg-gray-900/80 ">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+          {/* Left Side */}
+          <div className="text-white font-semibold text-lg">Anton F.</div>
+
+          {/* Navigation Links */}
+          <nav className="flex flex-wrap justify-center gap-6">
+            <a
+              href="#about"
+              className="text-white hover:text-purple-300 transition-colors duration-300 font-sans"
+            >
+              About me
+            </a>
+            <a
+              href="#skills"
+              className="text-white hover:text-purple-300 transition-colors duration-300 font-sans"
+            >
+              My skills
+            </a>
+            <a
+              href="#portfolio"
+              className="text-white hover:text-purple-300 transition-colors duration-300 font-sans"
+            >
+              My side projects
+            </a>
+            <a
+              href="#contact"
+              className="text-white hover:text-purple-300 transition-colors duration-300 font-sans"
+            >
+              Contact me
+            </a>
+          </nav>
+
+          {/* Download CV Button */}
+          <button className="group inline-flex items-center px-8 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-[0_0_20px_rgba(233,30,99,0.7)] hover:scale-105 transition-all duration-300 active:scale-95" style={{ background: 'linear-gradient(135deg, #FF0000, #0400FF)' }}>
+            Download CV
+          </button>
+        </div>
+
+        {/* Bottom Row */}
+        <div className="flex flex-col lg:flex-row justify-between items-center mt-6 pt-6 border-t border-gray-700">
+          <p className="text-gray-400 text-sm font-sans">
+            All rights reserved
+          </p>
+          <a
+            href="mailto:antonfil.job@gmail.com"
+            className="text-gray-400 text-sm hover:text-white transition-colors duration-300 font-sans"
+          >
+            antonfil.job@gmail.com
+          </a>
+        </div>
+      </div>
+    </footer>
+    </>
   );
 };
 
