@@ -1,7 +1,7 @@
 import React from 'react';
 import { Search } from 'lucide-react';
-import image from "../components/images/hero-image.png";
-import background from "../components/images/background_2.jpg";
+import image from "../components/images/hero_image.png";
+import background from "../components/images/background_1.jpg";
 import './hero/Hero.css';
 
 const Hero: React.FC = () => {

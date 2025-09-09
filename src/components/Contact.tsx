@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
       style={{
         background: `radial-gradient(60% 40% at 10% 10%, rgba(4,0,255,.25) 0%, transparent 60%),
                  radial-gradient(50% 35% at 90% 80%, rgba(255,0,0,.22) 0%, transparent 60%),
-                 linear-gradient(135deg, #0b0f16 0%, #140a1f 35%, #1a0a1a 100%)`
+                 linear-gradient(268deg, #0b0f16 0%, #140a1f 35%, #1a0a1a 100%)`
       }}
     >
       {/* Header */}
